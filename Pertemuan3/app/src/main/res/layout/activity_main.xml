@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#873939"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#6f8dbd"
+        android:gravity="center_horizontal"
+        android:padding="30dp"
+        android:text="MOBILE PROGRAMMING"
+        android:textColor="#ed3713"
+        android:textSize="40sp" />
+
+    <TextView
+        android:layout_width="396dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#6ee0ff"
+        android:paddingTop="50dp"
+        android:paddingBottom="30dp"
+        android:text="  Pramudya Widyanto \n
+    10190130 \n
+    10.4A.07 \n
+    TUGAS PERTEMUAN 3"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+</LinearLayout>
