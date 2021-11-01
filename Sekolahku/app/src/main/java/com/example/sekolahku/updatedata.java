@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class updatedata extends AppCompatActivity {
@@ -16,7 +17,8 @@ public class updatedata extends AppCompatActivity {
     Button ton1;
     EditText text1, text2, text3, text4, text5;
     String edit;
-    TextView textV1,textV2,textV3,textV4,textV5;
+    TextView textV1, textV2, textV3, textV4, textV5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,17 +29,16 @@ public class updatedata extends AppCompatActivity {
         text3 = (EditText) findViewById(R.id.editText3);
         text4 = (EditText) findViewById(R.id.editText4);
         text5 = (EditText) findViewById(R.id.editText5);
-        textV1=(TextView)findViewById(R.id.textView1);
-        textV2=(TextView)findViewById(R.id.textView2);
-        textV3=(TextView)findViewById(R.id.textView3);
-        textV4=(TextView)findViewById(R.id.textView4);
-        textV5=(TextView)findViewById(R.id.textView5);
+        textV1 = (TextView) findViewById(R.id.textView1);
+        textV2 = (TextView) findViewById(R.id.textView2);
+        textV3 = (TextView) findViewById(R.id.textView3);
+        textV4 = (TextView) findViewById(R.id.textView4);
+        textV5 = (TextView) findViewById(R.id.textView5);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM biodata WHERE nama = '" +
-                getIntent().getStringExtra("nama") + "'",null);
+                getIntent().getStringExtra("nama") + "'", null);
         cursor.moveToFirst();
-        if (cursor.getCount()>0)
-        {
+        if (cursor.getCount() > 0) {
             cursor.moveToPosition(0);
             text1.setText(cursor.getString(0).toString());
             text2.setText(cursor.getString(1).toString());
@@ -53,20 +54,19 @@ public class updatedata extends AppCompatActivity {
 // TODO Auto-generated method stub
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 edit = text1.getText().toString();
-                edit=text2.getText().toString();
-                edit=text3.getText().toString();
-                edit=text4.getText().toString();
-                edit=text5.getText().toString();
-                if(edit.isEmpty())
-                {
-                    Toast.makeText(getApplicationContext(),"Kolom tidak boleh kosong...",Toast.LENGTH_SHORT).show();
-                } else{
-                    db.execSQL("update biodata set nama='"+
-                            text2.getText().toString() +"', tgl='" +
-                            text3.getText().toString()+"', jk='"+
-                            text4.getText().toString() +"', alamat='" +
+                edit = text2.getText().toString();
+                edit = text3.getText().toString();
+                edit = text4.getText().toString();
+                edit = text5.getText().toString();
+                if (edit.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Kolom tidak boleh kosong...", Toast.LENGTH_SHORT).show();
+                } else {
+                    db.execSQL("update biodata set nama='" +
+                            text2.getText().toString() + "', tgl='" +
+                            text3.getText().toString() + "', jk='" +
+                            text4.getText().toString() + "', alamat='" +
                             text5.getText().toString() + "' where no='" +
-                            text1.getText().toString()+"'");
+                            text1.getText().toString() + "'");
                     Toast.makeText(getApplicationContext(), "Perubahan Tersimpan...",
                             Toast.LENGTH_LONG).show();
                     finish();

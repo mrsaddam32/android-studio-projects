@@ -33,6 +33,16 @@
             android:name=".inputdata"
             android:label="Input Data"
             android:parentActivityName=".inputdata"
-            android:theme="@style/Tema1"></activity>
+            android:theme="@style/Tema1" />
+        <activity
+            android:name=".detaildata"
+            android:label="Detail Data"
+            android:parentActivityName=".detaildata"
+            android:theme="@style/Tema1"/>
+        <activity
+            android:name=".updatedata"
+            android:label="Update Data"
+            android:parentActivityName=".updatedata"
+            android:theme="@style/Tema1"/>
     </application>
 </manifest>

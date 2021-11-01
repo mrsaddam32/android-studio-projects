@@ -19,7 +19,7 @@ User nantinya bisa menambahkan, update, dan hapus data siswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="Created By : MrSaddam32"
+        android:text="Created By : Muhammad Saddam Pradana"
         android:textSize="16sp"
         android:textStyle="bold" />
 
@@ -35,7 +35,7 @@ User nantinya bisa menambahkan, update, dan hapus data siswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Web : mrsaddam32.github.io"
+        android:text="Web : bsi.ac.id"
         android:textSize="16sp"
         android:textStyle="bold" />
 </LinearLayout>
