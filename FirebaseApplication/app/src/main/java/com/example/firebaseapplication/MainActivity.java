@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
                         {
                             if (task.isSuccessful()) {
                                 Toast.makeText(MainActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
+                                Intent form2 = new Intent(MainActivity.this,MainActivity2.class);
+                                startActivity(form2);
                             } else {
                                 Toast.makeText(MainActivity.this, "Login Gagal",
                                         Toast.LENGTH_SHORT).show();
